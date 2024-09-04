@@ -28,6 +28,10 @@ class VCYellow: UIViewController {
     @IBAction func exit(_ sender: UIButton) {
     }
     
+    @IBAction func unwindToYellowVC(unwindSegue: UIStoryboardSegue){
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
