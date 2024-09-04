@@ -28,6 +28,13 @@ class VCRed: UIViewController {
     @IBAction func exit(_ sender: UIButton) {
     }
 
+    //create unwind segue
+    @IBAction func unwindToRedVC(unwindSegue: UIStoryboardSegue){
+        
+    }
+    
+    //set up unwind from greenVC with Exit Button
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -25,8 +25,8 @@ class VCGreen: UIViewController {
     @IBAction func next(_ sender: UIButton) {
     }
     
-    @IBAction func exit(_ sender: UIButton) {
-    }
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
