@@ -34,6 +34,27 @@ class VCYellow: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VCGreen {
+            let destinationTitle = destination.navigationItem.title ?? "N/A"
+            print("Destination Title: \(destinationTitle)")
+            
+            destination.navigationItem.title = txtInput.text!
+            //The below code will not work because lblData does not exist at this moment.
+            destination.lblData?.text = txtInput.text
+            //Check the below code and VCBlue.swift for the solution.
+        }
+        
+        if let destination = segue.destination as? VCBlue {
+            let destinationTitle = destination.navigationItem.title ?? "N/A"
+            print("Destination Title: \(destinationTitle)")
+            
+            destination.navigationItem.title = txtInput.text!
+            //The solution - Pass data to a custom attribute (a variable) of the destination
+            destination.passedData = txtInput.text
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

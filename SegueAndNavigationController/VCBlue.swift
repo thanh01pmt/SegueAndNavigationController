@@ -15,6 +15,8 @@ class VCBlue: UIViewController {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnExit: UIButton!
     
+    var passedData: String? = ""
+    
     @IBAction func inputData(_ sender: UITextField) {
     }
     
@@ -27,6 +29,7 @@ class VCBlue: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblData.text = passedData
 
         // Do any additional setup after loading the view.
     }
