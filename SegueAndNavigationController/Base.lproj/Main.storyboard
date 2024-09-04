@@ -12,12 +12,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="VCRed" id="BYZ-38-t0r" userLabel="VCRed" customClass="VCRed" customModule="SegueAndNavigationController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-Pk-UPd">
-                                <rect key="frame" x="40" y="259" width="313" height="359"/>
+                                <rect key="frame" x="40" y="200" width="313" height="359"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90o-D2-Ghd" userLabel="lblData">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="33.333333333333336"/>
@@ -39,6 +39,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                         <connections>
                                             <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR5-i4-3DO"/>
+                                            <segue destination="6Id-HT-iH4" kind="show" id="g6x-l3-Xzm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5l-B3-Qix" userLabel="btnBack">
@@ -71,6 +72,7 @@
                             <constraint firstItem="YWi-Pk-UPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="sB7-B9-I72"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nPn-hs-96G"/>
                     <connections>
                         <outlet property="btnBack" destination="Z5l-B3-Qix" id="A9G-Sh-XeR"/>
                         <outlet property="btnExit" destination="qUC-zY-Fd1" id="KS5-0T-PJX"/>
@@ -88,20 +90,20 @@
             <objects>
                 <viewController storyboardIdentifier="VCYellow" id="6Id-HT-iH4" userLabel="VCYellow" customClass="VCYellow" customModule="SegueAndNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHS-Rc-M3D">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="coL-IT-4kY">
-                                <rect key="frame" x="50" y="259" width="293" height="359"/>
+                                <rect key="frame" x="50" y="200" width="293" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nE-8Z-2AZ" userLabel="lblData">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="33.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68g-QF-AqO" userLabel="txtInput">
-                                        <rect key="frame" x="0.0" y="81.333333333333314" width="293" height="33.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="98" width="293" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -109,23 +111,25 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLW-TR-qKI" userLabel="btnNext">
-                                        <rect key="frame" x="0.0" y="162.66666666666669" width="293" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="196" width="293" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                         <connections>
                                             <action selector="next:" destination="6Id-HT-iH4" eventType="touchUpInside" id="cUw-Fk-swW"/>
+                                            <segue destination="qvS-az-WMa" kind="show" id="e42-0M-haq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycb-Zy-WpJ" userLabel="btnBack">
-                                        <rect key="frame" x="0.0" y="244.33333333333334" width="293" height="33.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="294" width="293" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Back"/>
                                         <connections>
                                             <action selector="back:" destination="6Id-HT-iH4" eventType="touchUpInside" id="Bw8-iW-mIm"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="BwC-Ym-Uph"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-Qd-KZZ" userLabel="btnExit">
-                                        <rect key="frame" x="0.0" y="325.66666666666663" width="293" height="33.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="392" width="293" height="50"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Exit"/>
@@ -145,6 +149,7 @@
                             <constraint firstItem="coL-IT-4kY" firstAttribute="leading" secondItem="1T2-TI-AtS" secondAttribute="leading" constant="50" id="yMe-yd-UAK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dPI-cs-gSc"/>
                     <connections>
                         <outlet property="btnBack" destination="Ycb-Zy-WpJ" id="4sO-wF-GRA"/>
                         <outlet property="btnExit" destination="fvN-Qd-KZZ" id="dtD-uT-Uah"/>
@@ -162,20 +167,20 @@
             <objects>
                 <viewController storyboardIdentifier="VCGreen" id="qvS-az-WMa" userLabel="VCGreen" customClass="VCGreen" customModule="SegueAndNavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QYK-K8-Wkb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="qgO-Lf-NLu">
-                                <rect key="frame" x="50" y="259" width="293" height="359"/>
+                                <rect key="frame" x="50" y="200" width="293" height="442"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwA-y9-taX" userLabel="lblData">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="33.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-Nb-5K4" userLabel="textInput">
-                                        <rect key="frame" x="0.0" y="81.333333333333314" width="293" height="33.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="98" width="293" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -183,7 +188,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6K-2v-Eur" userLabel="btnNext">
-                                        <rect key="frame" x="0.0" y="162.66666666666669" width="293" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="196" width="293" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                         <connections>
@@ -191,15 +196,16 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKa-N3-sAe" userLabel="btnBack">
-                                        <rect key="frame" x="0.0" y="244.33333333333334" width="293" height="33.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="294" width="293" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Back"/>
                                         <connections>
                                             <action selector="back:" destination="qvS-az-WMa" eventType="touchUpInside" id="VX8-43-OtB"/>
+                                            <segue destination="6Id-HT-iH4" kind="show" id="YVq-Db-x5n"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-B5-skk" userLabel="btnExit">
-                                        <rect key="frame" x="0.0" y="325.66666666666663" width="293" height="33.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="392" width="293" height="50"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Exit"/>
@@ -219,6 +225,7 @@
                             <constraint firstItem="96c-EZ-vTe" firstAttribute="trailing" secondItem="qgO-Lf-NLu" secondAttribute="trailing" constant="50" id="cf2-qh-QLE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XJF-qa-OEc"/>
                     <connections>
                         <outlet property="btnBack" destination="PKa-N3-sAe" id="uZe-HN-OhH"/>
                         <outlet property="btnExit" destination="z1k-B5-skk" id="FP3-WL-QpB"/>
@@ -229,12 +236,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMW-fI-qkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="9"/>
+            <point key="canvasLocation" x="1544" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e42-0M-haq"/>
+        <segue reference="YVq-Db-x5n"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
