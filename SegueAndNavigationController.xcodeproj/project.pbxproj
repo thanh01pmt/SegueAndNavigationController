@@ -15,6 +15,7 @@
 		74249B9B2C87BD4600682E81 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 74249B9A2C87BD4600682E81 /* Base */; };
 		74249BA32C87BFF900682E81 /* VCYellow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74249BA22C87BFF900682E81 /* VCYellow.swift */; };
 		74249BA52C87C01E00682E81 /* VCGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74249BA42C87C01E00682E81 /* VCGreen.swift */; };
+		74B664932C88F04A00D096BD /* VCBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B664922C88F04A00D096BD /* VCBlue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		74249B9C2C87BD4600682E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74249BA22C87BFF900682E81 /* VCYellow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCYellow.swift; sourceTree = "<group>"; };
 		74249BA42C87C01E00682E81 /* VCGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGreen.swift; sourceTree = "<group>"; };
+		74B664922C88F04A00D096BD /* VCBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBlue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				74249B922C87BD4500682E81 /* VCRed.swift */,
 				74249BA22C87BFF900682E81 /* VCYellow.swift */,
 				74249BA42C87C01E00682E81 /* VCGreen.swift */,
+				74B664922C88F04A00D096BD /* VCBlue.swift */,
 				74249B942C87BD4500682E81 /* Main.storyboard */,
 				74249B972C87BD4600682E81 /* Assets.xcassets */,
 				74249B992C87BD4600682E81 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				74249BA52C87C01E00682E81 /* VCGreen.swift in Sources */,
 				74249B932C87BD4500682E81 /* VCRed.swift in Sources */,
+				74B664932C88F04A00D096BD /* VCBlue.swift in Sources */,
 				74249B8F2C87BD4500682E81 /* AppDelegate.swift in Sources */,
 				74249BA32C87BFF900682E81 /* VCYellow.swift in Sources */,
 				74249B912C87BD4500682E81 /* SceneDelegate.swift in Sources */,

@@ -39,7 +39,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                         <connections>
                                             <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR5-i4-3DO"/>
-                                            <segue destination="6Id-HT-iH4" kind="show" id="g6x-l3-Xzm"/>
+                                            <segue destination="6Id-HT-iH4" kind="show" identifier="toYellowVC" id="g6x-l3-Xzm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5l-B3-Qix" userLabel="btnGoToGreen">
@@ -110,22 +110,20 @@
                                             <action selector="inputData:" destination="6Id-HT-iH4" eventType="editingDidEnd" id="Bwy-Uu-MUJ"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLW-TR-qKI" userLabel="btnNext">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLW-TR-qKI" userLabel="btnGoToGreen">
                                         <rect key="frame" x="0.0" y="127.3333333333333" width="293" height="38.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Go To Green Scene"/>
                                         <connections>
-                                            <action selector="next:" destination="6Id-HT-iH4" eventType="touchUpInside" id="cUw-Fk-swW"/>
-                                            <segue destination="qvS-az-WMa" kind="show" id="e42-0M-haq"/>
+                                            <action selector="goToGreenVC:" destination="6Id-HT-iH4" eventType="touchUpInside" id="sdV-aM-F5m"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycb-Zy-WpJ" userLabel="btnBack">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycb-Zy-WpJ" userLabel="btnGoToBlue">
                                         <rect key="frame" x="0.0" y="202" width="293" height="38.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Back"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Go To Blue Scene"/>
                                         <connections>
-                                            <action selector="back:" destination="6Id-HT-iH4" eventType="touchUpInside" id="Bw8-iW-mIm"/>
-                                            <segue destination="p3o-DW-pY8" kind="unwind" unwindAction="unwindToRedVCWithUnwindSegue:" id="Vaj-1t-3bN"/>
+                                            <action selector="goToBlueVC:" destination="6Id-HT-iH4" eventType="touchUpInside" id="3Su-2F-ulI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-Qd-KZZ" userLabel="btnExit">
@@ -152,17 +150,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="YellowVC" id="dPI-cs-gSc"/>
                     <connections>
-                        <outlet property="btnBack" destination="Ycb-Zy-WpJ" id="4sO-wF-GRA"/>
                         <outlet property="btnExit" destination="fvN-Qd-KZZ" id="dtD-uT-Uah"/>
-                        <outlet property="btnNext" destination="vLW-TR-qKI" id="Qyh-bX-Vox"/>
+                        <outlet property="btnGoToBlue" destination="Ycb-Zy-WpJ" id="5rS-2N-iob"/>
+                        <outlet property="btnGoToGreen" destination="vLW-TR-qKI" id="wvT-9T-M8V"/>
                         <outlet property="lblData" destination="4nE-8Z-2AZ" id="eRH-k1-ZIU"/>
                         <outlet property="txtInput" destination="68g-QF-AqO" id="7t8-o0-DOY"/>
+                        <segue destination="Ep2-0X-gyR" kind="show" identifier="toBlueVC" id="JJx-9s-T01"/>
+                        <segue destination="qvS-az-WMa" kind="show" identifier="toGreenVC" id="Lhc-M3-q05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnN-F0-1cP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="p3o-DW-pY8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4490.8396946564881" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="4497" y="4"/>
         </scene>
         <!--VCGreen-->
         <scene sceneID="S3h-oO-Y6i">
@@ -203,7 +203,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Back"/>
                                         <connections>
                                             <action selector="back:" destination="qvS-az-WMa" eventType="touchUpInside" id="mal-q8-01F"/>
-                                            <segue destination="n29-Ne-iex" kind="unwind" unwindAction="unwindToYellowVCWithUnwindSegue:" id="3aX-Pd-g1I"/>
+                                            <segue destination="n29-Ne-iex" kind="unwind" unwindAction="unwindToYellowVCWithUnwindSegue:" id="ncb-iG-3eS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-B5-skk" userLabel="btnExit">
@@ -212,7 +212,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Exit"/>
                                         <connections>
-                                            <segue destination="n29-Ne-iex" kind="unwind" unwindAction="unwindToRedVCWithUnwindSegue:" id="l7J-pt-b4d"/>
+                                            <segue destination="n29-Ne-iex" kind="unwind" unwindAction="unwindToRedVCWithUnwindSegue:" id="fcT-LT-fJz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,7 +239,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMW-fI-qkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="n29-Ne-iex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5248.0916030534345" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="5347" y="-300"/>
+        </scene>
+        <!--VCBlue-->
+        <scene sceneID="zKh-4g-Ig2">
+            <objects>
+                <viewController id="Ep2-0X-gyR" userLabel="VCBlue" customClass="VCBlue" customModule="SegueAndNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lh2-sw-sWt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gZv-qL-IuE">
+                                <rect key="frame" x="50" y="303" width="293" height="315"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84p-l0-DAi" userLabel="lblData">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4E-3k-5ox" userLabel="textInput">
+                                        <rect key="frame" x="0.0" y="56.666666666666686" width="293" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="inputData:" destination="qvS-az-WMa" eventType="editingDidEnd" id="33e-Hp-Ji2"/>
+                                            <action selector="inputData:" destination="Ep2-0X-gyR" eventType="editingDidEnd" id="6VS-Oj-ATR"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oie-LK-yOs" userLabel="btnNext">
+                                        <rect key="frame" x="0.0" y="127.3333333333333" width="293" height="38.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                        <connections>
+                                            <action selector="next:" destination="qvS-az-WMa" eventType="touchUpInside" id="07K-41-JPY"/>
+                                            <action selector="next:" destination="Ep2-0X-gyR" eventType="touchUpInside" id="4yj-G3-rda"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Z-32-7ns" userLabel="btnBack">
+                                        <rect key="frame" x="0.0" y="202" width="293" height="38.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="qvS-az-WMa" eventType="touchUpInside" id="S6W-hf-cfT"/>
+                                            <action selector="back:" destination="Ep2-0X-gyR" eventType="touchUpInside" id="tvx-hB-SEf"/>
+                                            <segue destination="jcD-qf-CbJ" kind="unwind" unwindAction="unwindToYellowVCWithUnwindSegue:" id="Qiy-di-8aU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-2X-3rG" userLabel="btnExit">
+                                        <rect key="frame" x="0.0" y="276.66666666666663" width="293" height="38.333333333333314"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Exit"/>
+                                        <connections>
+                                            <segue destination="jcD-qf-CbJ" kind="unwind" unwindAction="unwindToRedVCWithUnwindSegue:" id="a3Z-G5-NVR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cdS-dP-rce"/>
+                        <color key="backgroundColor" red="0.0" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cdS-dP-rce" firstAttribute="bottom" secondItem="gZv-qL-IuE" secondAttribute="bottom" constant="200" id="Doa-lE-NxZ"/>
+                            <constraint firstItem="cdS-dP-rce" firstAttribute="trailing" secondItem="gZv-qL-IuE" secondAttribute="trailing" constant="50" id="KZQ-pk-ow2"/>
+                            <constraint firstItem="gZv-qL-IuE" firstAttribute="top" secondItem="cdS-dP-rce" secondAttribute="top" constant="200" id="m6d-06-KGR"/>
+                            <constraint firstItem="gZv-qL-IuE" firstAttribute="leading" secondItem="cdS-dP-rce" secondAttribute="leading" constant="50" id="sUU-3k-idF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BlueVC" id="iBb-tB-ci6"/>
+                    <connections>
+                        <outlet property="btnBack" destination="d1Z-32-7ns" id="EE8-cr-4OQ"/>
+                        <outlet property="btnExit" destination="0Ne-2X-3rG" id="Pfw-iv-9dA"/>
+                        <outlet property="btnNext" destination="oie-LK-yOs" id="HwG-h1-IjC"/>
+                        <outlet property="lblData" destination="84p-l0-DAi" id="4i2-1x-o3F"/>
+                        <outlet property="txtInput" destination="T4E-3k-5ox" id="VzZ-b0-s2q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8y-4W-FT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jcD-qf-CbJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5346" y="344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SLb-Wv-XcA">
